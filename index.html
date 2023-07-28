@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Піцерія Domino's Pizza</title>
+    <link rel="stylesheet" href="./Styles/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<!--
+    CONFIRM ORDER button, which opens the block when pressed
+-->
+<body>
+    <header>
+        <div class="wrapper">
+                <a href="index.html"><img id="logo" src="Pizza_pictures/Carlo.png" alt="Papa Carlo logo"></a>
+            <nav>
+                <ul>
+                    <li>Pizza maker</li>
+                    <li>Potato menu</li>
+                    <li>Salads</li>
+                    <li>Вeverages</li>
+                    <li>Delivery</li>
+                    <li>Feedback</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <h1>Make the pizza of your dreams</h1>
+        <sub>drag and drop all the necessary ingredients</sub>
+        <div id="banner">Receive 30% discount!<br><button>Receive</button></div>
+        <h3>Size:</h3>
+        <form id='pizza' action="">
+            <label class="radio"><input type="radio" class="radioIn" id="small" name="size" value="small"><span class="fakeRadio"></span><span>Small</span></label>
+            <label class="radio"><input type="radio" class="radioIn" id="mid" name="size" value="mid"><span class="fakeRadio"></span><span>Middle</span></label>
+            <label class="radio"><input type="radio" class="radioIn" id="big" name="size" value="big"  checked="true"><span class="fakeRadio" ></span><span>Big</span></label>
+        <!---->
+        </form>
+        <div class="table-wrapper">
+            <div class="table">
+                <img src="Pizza_pictures/klassicheskij-bortik_1556622914630.png" alt="Classic cake">
+            </div>
+            <div class="ingridients">
+                <h3>Sauces:</h3>
+                <div>
+                    <img draggable="true" class="draggable" id="sauceClassic" src="Pizza_pictures/sous-klassicheskij_1557758736353.png" alt="">
+                    <span>Ketchup</span>
+                </div>
+                <div>
+                    <img draggable="true" class="draggable" id="sauceBBQ" src="Pizza_pictures/sous-bbq_155679418013.png" alt="">
+                    <span>BBQ</span></div>
+                <div>
+                    <img draggable="true" class="draggable" id="sauceRikotta" src="Pizza_pictures/sous-rikotta_1556623391103.png" alt="">
+                    <span>Ricotta</span></div>
+                <h3>Toppings:</h3>
+                <div>
+                    <img draggable="true" class="draggable" id="moc1" src="Pizza_pictures/mocarela_1556623220308.png" alt="">
+                    <span>Cheddar</span></div>
+                <div>
+                    <img draggable="true" class="draggable" id="moc2" src="Pizza_pictures/mocarela_1556785182818.png" alt="">
+                    <span>Feta</span></div>
+                <div>
+                    <img draggable="true" class="draggable" id="moc3" src="Pizza_pictures/mocarela_1556785198489.png" alt="">
+                    <span>Mozarella</span></div>
+                <div>
+                    <img draggable="true" class="draggable" id="telya" src="Pizza_pictures/telyatina_1556624025747.png" alt="">
+                    <span>Veal</span></div>
+                <div>
+                    <img draggable="true" class="draggable" id="vetch1" src="Pizza_pictures/vetchina.png" alt="">
+                    <span>Tomatoes</span></div>
+                <div>
+                    <img draggable="true" class="draggable" id="vetch2" src="Pizza_pictures/vetchina_1556623556129.png" alt="">
+                    <span>Mushrooms</span></div>
+            </div>
+        </div>
+        <div class="result">
+            <div class="price"><p>Price:</p></div>
+            <div class="sauces"><p>Sauces:</p></div>
+            <div class="topings"><p>Toppings:</p></div>
+        </div>
+    </main>
+    <footer>
+        <h2>Confirm the order</h2>
+        <sub>Complete the form and confirm your order</sub>
+        <form name="info" method="POST"  action="./php/mail.php">
+            <!---->
+            <div class="grid">
+                <label for="name">Your name</label>
+                <input placeholder="Name" name="name" type="text">
+                <label for="phone">Phone number</label>
+                <input placeholder="+380505050500" name="phone" type="tel">
+                <label for="email">E-mail</label>
+                <input placeholder="email@email.com" name="email" type="email">
+                <input class='button' name="cancel" type="reset" value="Reset">
+                <input class='button' name="btnSubmit" type="button" value="Confirm order >>">
+            </div>
+        </form>
+        <address>© 2002–2020 Domino's pizzeria chain!</address>
+    </footer>
+    <script src="./JS/index.js"></script>
+</body>
+</html>
